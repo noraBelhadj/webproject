@@ -1,0 +1,35 @@
+
+
+<div class="container">
+	<div class="login">
+		<div class="login-header"></div>
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<div class="inputWrapp">
+				<div class="float-right"><input type="email" placeholder="Email" formControlName="email" [ngClass]="{
+                   'has-danger': loginForm.controls.email.invalid && loginForm.controls.email.dirty, 
+                   'has-success': loginForm.controls.email.valid && loginForm.controls.email.dirty 
+                 }" />
+
+               <div class="form-control-feedback"  *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.dirty"> 
+                 l'adress mail est incorect
+                </div>
+					<label class="float-left titre">Identifiant</label>
+				</div>
+			</div>
+			<div class="inputWrapp">
+
+				<div class="float-right"><input type="password" placeholder="mot de passe" formControlName="password" required /></div>
+				<label class="float-left titre">Mot de passe</label>
+                <div class="form-control-feedback"  *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.dirty"> 
+                 le mod de passe doit depaser 8 caractère
+                </div>
+			</div>
+			<div class="inputWrapp">
+				 <button type="submit" class="btn btn-primary" >Submit</button>
+			</div>
+
+		 
+		</form>
+		
+	</div>
+</div>

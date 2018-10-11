@@ -15,7 +15,7 @@ export class AuthService {
     constructor(
     
     private Http: HttpService,
-    private actions : AuthActions,
+   // private actions : AuthActions,
    // private store : Store<AppState>
   	) { }
 

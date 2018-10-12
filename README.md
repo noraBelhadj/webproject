@@ -25,34 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-
-## access to the project
-ng serve
-http://localhost:4200/accueil
-http://localhost:4200/auth/login
-
-## git
-déposer un projet sur github
-se positionnr dans le projet
-
-$ git init   // initialise le dosier local comme un repo local 
-
-$ git add .   // ajouter ls fichiers au repo local
-
-$ git comit -m "Prmier commit"
-
-$ git remote add origin https://github.com/noraBelhadj/webproject.git
-
-$ git push -u origin master  // commiter les modifications sur la trunk ( master)
-
-$ git pull 
-
-## creation de branches
-
-$ git fetch origin   // affiche l'ensemble des branches
-
-$ git checkout -tb webproject-feature origin/webproject-feature  // cree un local branche
-
-$ git pull // tout mettre a jour

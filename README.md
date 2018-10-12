@@ -50,9 +50,15 @@ $ git push -u origin master  // commiter les modifications sur la trunk ( master
 $ git pull 
 
 ## creation de branches
+se positionner dans un repertoire distiné à la branche
+$ git init
+$ git add .
+$ git remote add origin https://github.com/noraBelhadj/webproject.git
+$ git fetch   // affiche l'ensemble des branches
+$ git checkout webproject-feature
+$ git checkout -b webproject-feature origin/webproject-feature // recuprer la branch feature 
+$ git commit -a -m "commit feature"
+$ git push
+$ git pull // Tout mettre à jour
 
-$ git fetch origin   // affiche l'ensemble des branches
 
-$ git checkout -tb webproject-feature origin/webproject-feature  // cree un local branche
-
-$ git pull // tout mettre a jour

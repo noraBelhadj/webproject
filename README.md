@@ -55,4 +55,4 @@ $ git fetch origin   // affiche l'ensemble des branches
 
 $ git checkout -tb webproject-feature origin/webproject-feature  // cree un local branche
 
-$ git pull // tout mettre a jour
+$ git pull // Tout mettre à jour

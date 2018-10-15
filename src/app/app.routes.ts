@@ -16,10 +16,11 @@ export const routes : Routes = [
     path: 'home',
     loadChildren: './components/home/home.module#HomeModule'
   },
-  {
-      path: 'accueil',
-      component : AcceuilComponent,
-  }
+  { path:'',  redirectTo: 'accueil', pathMatch: 'full'
+  },
+  { path: 'accueil', component: AcceuilComponent
+  },
+  
 ];
 
 

@@ -60,5 +60,7 @@ $ git checkout -b webproject-feature origin/webproject-feature // recuprer la br
 $ git commit -a -m "commit feature"
 $ git push
 $ git pull // Tout mettre à jour
+$ npm install
+$ ng serve
 
 

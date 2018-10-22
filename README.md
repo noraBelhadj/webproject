@@ -63,4 +63,9 @@ $ git pull // Tout mettre à jour
 $ npm install
 $ ng serve
 
+## routing
 
+https://www.concretepage.com/angular-2/angular-2-4-child-routes-and-relative-navigation-example
+
+
+https://itnext.io/child-routes-with-respective-components-in-angular-4-36f1be42278e

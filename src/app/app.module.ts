@@ -17,8 +17,9 @@ import { AuthService } from './services/authentification.service';
 import { HttpService } from './services/http';
 
 import { routes } from './app.routes';
-import { AcceuilComponent } from './components/acceuil/acceuil.component';
+//import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { reducer } from './app.reducers';
+//import { SubscribeComponent } from './components/subscribe/subscribe.component';
 //import { LoginRoutingModule }      from './routes/login-routing.module';
 
 
@@ -26,7 +27,8 @@ import { reducer } from './app.reducers';
 @NgModule({
   declarations: [
     AppComponent,
-    AcceuilComponent,
+    //AcceuilComponent,
+    //SubscribeComponent,
    
     
   ],

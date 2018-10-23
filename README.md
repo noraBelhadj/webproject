@@ -63,4 +63,16 @@ $ git pull // Tout mettre à jour
 $ npm install
 $ ng serve
 
+lorsqu'on ajoute de nouveau components ou fichier,il faut executer git add . pour ls ajouter puis commit et push
+
+## routing
+
+## lien
+https://www.concretepage.com/angular-2/angular-2-4-child-routes-and-relative-navigation-example
+
+
+https://itnext.io/child-routes-with-respective-components-in-angular-4-36f1be42278e
+
+
+https://stackblitz.com/angular/jbgeoqlbyea?file=src%2Fapp%2Fapp.component.ts
 

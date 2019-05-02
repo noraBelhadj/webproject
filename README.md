@@ -43,7 +43,7 @@ $ git add .   // ajouter ls fichiers au repo local
 
 $ git comit -m "Prmier commit"
 
-$ git remote add origin https://github.com/noraBelhadj/webproject.git
+$ git remote add origin https://github.com/noraBelhadj/webproject.git  (creation du repo git du projet en question, on peut le creer directement sur l'nterface git)
 
 $ git push -u origin master  // commiter les modifications sur la trunk ( master)
 

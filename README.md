@@ -66,6 +66,45 @@ $ ng serve
 lorsqu'on ajoute de nouveau components ou fichier,il faut executer git add . pour ls ajouter puis commit et push
 
 ## routing
+exemple la route /home 
+
+le component s'ajout autaumatiquement aux déclaration du fichier app.module, pui ajouter la route { path:'home', component:HomeComponent}
+ ==> avec le lazy loading:
+ atape:1
+ creer un  fichier home.module.ts
+ export const routes =  [{ path:'', component: HomeComponent} ];
+ @NgModule({
+  declarations: [
+    HomeComponent
+  ],
+  imports: [
+    RouterModule.forChild(routes)
+  ],
+  providers: [
+  ]
+})
+export class HomeModule {}
+Remarque : laisser le champs path vide car le path sera ajouter dans le fichier app.module
+
+etape2:
+
+ajouter la route: 
+
+{ path: 'home',
+    loadChildren: './components/home/home.module#HomeModule'
+  }
+  
+ pour un lien profond: ex /home/subscribe
+ 
+ ajouter dans la déclaration de SubscribeComponent dans home.module.ts et la route export const routes =  [{ path:'', component: HomeComponent} , {path:'subcribe', component: HomeComponent}];
+ 
+ 
+
+
+ 
+ 
+ 
+ 
 
 ## lien
 https://www.concretepage.com/angular-2/angular-2-4-child-routes-and-relative-navigation-example

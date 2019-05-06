@@ -7,7 +7,7 @@ export const accueilRoutes = [
   { path: '', 
     component: AcceuilComponent,
     children:[
-         {path:'test',
+         {path:'/test',
           component:SubscribeComponent
          }]
   },

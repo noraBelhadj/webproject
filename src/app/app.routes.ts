@@ -3,6 +3,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
+
+import  { ArticleComponent }  from './components/article/article.component';
 //import { CanActivateViaAuthGuard } from './guards/auth.guard';
 
 
@@ -24,7 +26,9 @@ export const routes : Routes = [
      path: '',
      redirectTo: '/accueil',
      pathMatch: 'full'
-  }
+  },
+  {  path: 'article',
+     loadChildren: './components/article/article.module#ArticleModule'}
 ];
 
 

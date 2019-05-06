@@ -19,6 +19,7 @@ import { HttpService } from './services/http';
 import { routes } from './app.routes';
 //import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { reducer } from './app.reducers';
+//import { ArticleComponent } from './components/article/article.component';
 //import { SubscribeComponent } from './components/subscribe/subscribe.component';
 //import { LoginRoutingModule }      from './routes/login-routing.module';
 
@@ -27,6 +28,7 @@ import { reducer } from './app.reducers';
 @NgModule({
   declarations: [
     AppComponent,
+    //ArticleComponent,
     //AcceuilComponent,
     //SubscribeComponent,
    

@@ -1,23 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import {
-    ReactiveFormsModule,
-    FormsModule,
-    FormGroup,
-    FormControl,
-    Validators,
-} from '@angular/forms';
-
+import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 import { AuthService } from '../../services/authentification.service';
 //import { Store } from '@ngrx/store';
 import { AppState } from '../../interfaces';
 import { Router,  ActivatedRoute, } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-
 import { getAuthStatus } from '../../reducers/auth/selectors';
-
-
 
 @Component({
   selector: 'webProject-login',
@@ -27,17 +16,17 @@ import { getAuthStatus } from '../../reducers/auth/selectors';
 
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  email: FormControl;
-  password: FormControl;
+  email:     FormControl;
+  password:  FormControl;
   loginSubs: Subscription;
   returnUrl: string;
 
   constructor(
-   // private store: Store<AppState>,
+    // private store: Store<AppState>,
     private authService: AuthService,
-   // private route: ActivatedRoute,
-  private router: Router,
-   private route: ActivatedRoute
+    // private route: ActivatedRoute,
+    private router: Router,
+    private route: ActivatedRoute
 
     ) { }
 

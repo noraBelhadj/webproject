@@ -8,7 +8,7 @@
    height: 250px;
    margin: 0 auto;
    margin-top: 20%;
-   border-radius: 3px;
+   //border-radius: 3px;
    background-color: #fff;
    border: 2px solid #ddd;
 }
@@ -21,7 +21,7 @@
 }
 
 .login .login-header{
-	background-color:#8ed8b5;
+	background-color:#5dcca3;
     height: 40px;
     margin-bottom: 20px;
 }
@@ -32,7 +32,10 @@
 	display: inline-block;
 	text-align: left;
 }
-
+.btn-div{
+	margin: 0 auto;
+	width: 100%;
+}
 .login .inputWrapp label{
 	padding: 10px 10px 10px 10px;
 	color:#767676;

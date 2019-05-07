@@ -1,3 +1,50 @@
-<p>
-  subscribe works!
-</p>
+<div class="container">
+	<div class="login">
+		<div class="login-header"></div>
+		<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+
+			<div class="inputWrapp">
+				 <input type="text" formControlName="email" placeholder="email" [ngClass]="{'has-danger':subscribeForm.controls.email.invalid && subscribeForm.controls.email.dirty,
+				   'has-success': subscribeForm.controls.email.valid && subscribeForm.controls.email.dirty}"
+				 >
+				  <label class="float-left titre"> Email</label>
+				<div class="form-control-feedback"  *ngIf="subscribeForm.controls.email.invalid && subscribeForm.controls.email.dirty"> 
+                 l'adress mail est incorect
+                </div>
+
+				 <input type="password" formControlName="password" placeholder="password" [ngClass]="{'has-success': subscribeForm.controls.password.invalid && subscribeForm.controls.password.dirty,
+				  'has-success': subscribeForm.controls.password.valid && subscribeForm.controls.password.dirty}">
+
+				  <label class="float-left titre">Mot de passe</label>
+                <div class="form-control-feedback"  *ngIf="subscribeForm.controls.password.invalid && subscribeForm.controls.password.dirty"> 
+                 le mod de passe doit depaser 8 caractère
+                </div>
+				
+		        <div formGroupName="infosPersonnel">
+		        	<h1> Information personnelles</h1>
+		        	<div class="inputWrapp">
+				    <label class="float-left titre">Nom:</label>
+                    <input type="text" formControlName="nom" required>
+                    </div>
+                    <div class="inputWrapp">
+                    <label class="float-left titre"> Prenom:</label>
+                    <input type="text" formControlName="prenom" required>
+                </div>
+                <div class="inputWrapp">
+                    <label class="float-left titre"> Date de naissance</label>
+                    <input type="text" formControlName="dateDeNaissance">
+                </div>
+			    </div> 
+			</div>
+		
+			<div class="inputWrapp">
+				<div class="btn-div">
+				 <button type="submit" class="btn btn-primary" >Submit</button>
+				</div>
+			</div>
+
+		 
+		</form>
+		
+	</div>
+</div>

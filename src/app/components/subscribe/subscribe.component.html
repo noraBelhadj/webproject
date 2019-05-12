@@ -1,50 +1,55 @@
+
+
+
 <div class="container">
-	<div class="login">
-		<div class="login-header"></div>
-		<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
-
-			<div class="inputWrapp">
-				 <input type="text" formControlName="email" placeholder="email" [ngClass]="{'has-danger':subscribeForm.controls.email.invalid && subscribeForm.controls.email.dirty,
-				   'has-success': subscribeForm.controls.email.valid && subscribeForm.controls.email.dirty}"
-				 >
-				  <label class="float-left titre"> Email</label>
-				<div class="form-control-feedback"  *ngIf="subscribeForm.controls.email.invalid && subscribeForm.controls.email.dirty"> 
+	<div> 
+		<h1> Créer un compte </h1>
+	</div>
+	<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label> Email</label>
+			<input class="form-control" type="email" formControlName="email" [ngClass]="{'has-danger':userForm.controls.email.invalid && userForm.controls.email.dirty,
+				'has-success': userForm.controls.email.valid && userForm.controls.email.dirty}">
+			<div class="alert alert-danger" *ngIf="userForm.controls.email.invalid && userForm.controls.email.dirty"> 
                  l'adress mail est incorect
-                </div>
+            </div>
+		</div>
 
-				 <input type="password" formControlName="password" placeholder="password" [ngClass]="{'has-success': subscribeForm.controls.password.invalid && subscribeForm.controls.password.dirty,
-				  'has-success': subscribeForm.controls.password.valid && subscribeForm.controls.password.dirty}">
-
-				  <label class="float-left titre">Mot de passe</label>
-                <div class="form-control-feedback"  *ngIf="subscribeForm.controls.password.invalid && subscribeForm.controls.password.dirty"> 
-                 le mod de passe doit depaser 8 caractère
-                </div>
+			    
+		<div class="form-group">
+			 <label>Mot de passe</label>
+			 <input class="form-control" type="password" formControlName="password" [ngClass]="{'has-success': userForm.controls.password.invalid && userForm.controls.password.dirty,
+				  'has-success': userForm.controls.password.valid && userForm.controls.password.dirty}">
+           <div class="alert alert-danger" *ngIf="userForm.controls.password.invalid && userForm.controls.password.dirty"> 
+                 le mot de passe doit depaser 8 caractère
+            </div>
+        </div>
 				
 		        <div formGroupName="infosPersonnel">
-		        	<h1> Information personnelles</h1>
-		        	<div class="inputWrapp">
-				    <label class="float-left titre">Nom:</label>
-                    <input type="text" formControlName="nom" required>
+		        	<div class="form-group">
+				    <label>Nom:</label>  
+                    <input class="form-control" type="text" formControlName="nom">
+                    <div class="alert alert-danger" *ngIf="userForm.controls.infosPersonnel.controls.nom.invalid && userForm.controls.infosPersonnel.controls.nom.dirty"> 
+                    le nom est obligatoire
+                     </div>
                     </div>
-                    <div class="inputWrapp">
-                    <label class="float-left titre"> Prenom:</label>
-                    <input type="text" formControlName="prenom" required>
-                </div>
-                <div class="inputWrapp">
-                    <label class="float-left titre"> Date de naissance</label>
-                    <input type="text" formControlName="dateDeNaissance">
-                </div>
+                    <div class="form-group">
+                    <label> Prenom:</label>
+                    <input class="form-control" type="text" formControlName="prenom" >
+                    </div>
+                    <div class="form-group">
+                    <label> Date de naissance</label>
+                    <input class="form-control" type="text" formControlName="dateDeNaissance">
+                    </div>
 			    </div> 
-			</div>
-		
-			<div class="inputWrapp">
-				<div class="btn-div">
-				 <button type="submit" class="btn btn-primary" >Submit</button>
+			
+				<div>
+				 <button type="submit" class="btn btn-primary">Enregistrer</button>
 				</div>
-			</div>
+			
 
 		 
 		</form>
 		
-	</div>
+
 </div>

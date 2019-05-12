@@ -6,7 +6,7 @@ import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators } 
   styleUrls: ['./subscribe.component.css']
 })
 export class SubscribeComponent implements OnInit {
-  subscribeForm : FormGroup;
+  userForm : FormGroup;
   infosForm     : FormGroup;
   nom            :FormControl;
   dateDeNaissance: FormControl;
@@ -33,12 +33,12 @@ export class SubscribeComponent implements OnInit {
   //  	pays: this.pays}
   //  )
 
-    this.subscribeForm = new FormGroup({
+    this.userForm = new FormGroup({
     	//nom: this.nom,
     	email: new FormControl('',[Validators.required,Validators.pattern("[^ @]*@[^ @]*")]),
     	password: new FormControl ('', [Validators.required, Validators.minLength(5)]),
     	infosPersonnel: new FormGroup({
-         nom: new FormControl('',[Validators.required]),
+         nom: new FormControl('',[Validators.required, Validators.minLength(5)]),
          prenom: new FormControl('', [Validators.required]),
          dateDeNaissance: new FormControl('',[Validators.required])
     	}),
@@ -47,14 +47,14 @@ export class SubscribeComponent implements OnInit {
     	  rue: new FormControl(),
     	  codePostale: new FormControl()
     	})
-    	/*infosForm: this.infosForm*/
+    	
     });
   }
 
    onSubmit() {
-    const values = this.subscribeForm.value;
+    const values = this.userForm.value;
     const keys = Object.keys(values);
-    if (this.subscribeForm.valid) {
+    if (this.userForm.valid) {
       console.log(values);}
   }
 

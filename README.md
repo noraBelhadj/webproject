@@ -56,12 +56,14 @@ $ git add .
 $ git remote add origin https://github.com/noraBelhadj/webproject.git
 $ git fetch   // affiche l'ensemble des branches
 $ git checkout webproject-feature
-$ git checkout -b webproject-feature origin/webproject-feature // recuprer la branch feature 
+$ git checkout -b webproject-feature origin/webproject-feature // recuprer la branch feature et switch vers la brance feature
+$ npm install
+$ ng serve
+## commiter les modifs
 $ git commit -a -m "commit feature"
 $ git push
 $ git pull // Tout mettre à jour
-$ npm install
-$ ng serve
+
 
 lorsqu'on ajoute de nouveau components ou fichier,il faut executer git add . pour ls ajouter puis commit et push
 

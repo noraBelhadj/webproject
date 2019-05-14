@@ -33,8 +33,7 @@ ng serve
 http://localhost:4200/accueil
 http://localhost:4200/auth/login
 
-#####################################################
-#############Notses techiques########################
+###############################Notses techniques########################
 
 
 ## git

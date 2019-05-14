@@ -102,10 +102,11 @@ ajouter la route:
  
  
 
+## dircetive de structure
+ngif, ngfor
 
- 
- 
- 
+## directive d'attributs
+ [ngClass] , [ngStyle]
  
 
 ## lien

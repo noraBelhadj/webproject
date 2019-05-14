@@ -33,6 +33,10 @@ ng serve
 http://localhost:4200/accueil
 http://localhost:4200/auth/login
 
+#####################################################
+#############Notses techiques########################
+
+
 ## git
 déposer un projet sur github
 se positionnr dans le projet
@@ -100,7 +104,7 @@ ajouter la route:
  
  ajouter dans la déclaration de SubscribeComponent dans home.module.ts et la route export const routes =  [{ path:'', component: HomeComponent} , {path:'subcribe', component: HomeComponent}];
  
- 
+## reactiveforms
 
 ## dircetive de structure
 ngif, ngfor
@@ -108,6 +112,20 @@ ngif, ngfor
 ## directive d'attributs
  [ngClass] , [ngStyle]
  
+## services
+
+##canactivate
+
+##session
+
+##les states (ngrx)
+
+#######utilité des fichiers
+
+#######contenu de l'appli
+
+page login
+pag souscrire
 
 ## lien
 https://www.concretepage.com/angular-2/angular-2-4-child-routes-and-relative-navigation-example

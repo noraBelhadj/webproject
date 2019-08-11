@@ -1,0 +1,46 @@
+.container{
+width: 92%;
+max-width:1250px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+overflow: hidden;
+
+
+}
+.container-category {
+    margin-top: 50px;
+}
+
+.flex-list {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+padding: 0;
+margin: 0;
+list-style: none;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+}
+.container-category .flex-list .felx-list-item  .selected {
+    background: #78c7c5;
+}
+.container-category .flex-list .felx-list-item {
+    width: calc(33.33% - 10px); 
+    height: 200px;
+    margin-bottom:20px;
+    background-color: #78c7c5;
+
+}
+
+li a{
+color:#fff;
+font-size: 24px;
+line-height: 110px;
+display: block;
+height: 100%;
+width: 100%;
+position: relative;
+text-align: center;
+cursor: pointer;
+}

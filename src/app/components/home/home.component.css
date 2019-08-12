@@ -1,5 +1,68 @@
+
 div {height: 100px; width: 100px;}
 div#test1 {background-color: pink;position: absolute; z-index: 4; width: 100px; height: 100px;}
 div#test2 {background-color: red;position: absolute; z-index: 2;width: 100px; height: 100px;}
 div#test3 {background-color: green;z-index: 10;width: 100px; height: 100px;}
 div#test4 {background-color: lightgrey; z-index: 1;width: 100px; height: 100px;}
+
+.contenu
+{
+ background-color: red;
+ width: 700px;
+ padding:90px;
+ border:2px solid black;
+
+}
+.box{
+	display:flex;
+	border:3px solid blue;
+	flex-basis: initial;
+	flex-wrap: wrap;
+	/*flex-direction: row-reverse;*/
+}
+.one1{
+	width:300px;
+}
+.two1{
+	width: 100px;
+}
+.three1{
+  width:50px;
+}
+
+.box2{
+	display: flex;
+	/*//flex-basis: auto;*/
+}
+
+.one {
+	flex:1;
+	border:2px solid green;
+	width: 10px;
+	height: 50px;
+}
+.two {
+	flex:1;
+	border:2px solid green;
+	width: 200px;
+}
+.three {
+	flex:2;
+	border:2px solid green;
+	width: 50px;
+}
+.box3{
+	display: flex;
+	width:350px;
+	height: 100px;
+	border: 1px solid #c3c3c3;
+}
+.box3 div:nth-of-type(1){flex-grow: 1; background-color: coral;}
+.box3 div:nth-of-type(2){flex-grow: 3; background-color:lightblue;}
+.box3 div:nth-of-type(3){flex-grow:1; background-color:khaki;}
+.box3 div:nth-of-type(4){flex-grow: 1; background-color: pink;}
+.box3 div:nth-of-type(5){flex-grow:1; background-color:lightgrey;}
+
+.paragraph div:nth-of-type(1){float:right;}
+.paragraph div:nth-of-type(2){float:left;position: relative;top:20px; left:20px;}
+

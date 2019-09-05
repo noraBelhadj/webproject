@@ -43,7 +43,7 @@ import { HeaderComponent } from './components/header/header.component';
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot(reducer),
+   // StoreModule.forRoot(reducer),
   // LoginRoutingModule
 
   ],

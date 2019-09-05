@@ -1,4 +1,4 @@
-import { compose } from '@ngrx/core/';
+//import { compose } from '@ngrx/core/';
 import { combineReducers, ActionReducer } from '@ngrx/store';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { environment } from './../environments/environment';

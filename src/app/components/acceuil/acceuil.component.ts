@@ -17,6 +17,7 @@ export class AcceuilComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    /*
   	const ARR = [1,2,3];
 
   	ARR.length =2;
@@ -60,33 +61,29 @@ export class AcceuilComponent implements OnInit {
   //alert("starting...")
 
   });
+
+  */
   }
 
 }
 
 
+/*
+
  class Circle {
- 	
- 	
-
  	static area(r){
-
-
 		return (r*r*Math.PI);
 	} 
-
  }
 	
 	let c = new Circle();
- 
-
 	Circle.area(5);
 	//c.area(5);
   //c.constructor.area(5);
-
+*/
   
   
-
+/*
 const observable = new Observable(subscriber=>{
    subscriber.next(1);
    subscriber.next('ghghg');
@@ -107,7 +104,12 @@ error(err){ console.log('error')},
 complete(){ console.log('done')}
 
 });
+*/
 
+
+
+
+/*
 console.log('juste apre subscribe');
 const test ="";
 
@@ -127,3 +129,4 @@ let myPromise = new Promise((resolve, reject) => {
         reject(error);
     }
 });
+*/

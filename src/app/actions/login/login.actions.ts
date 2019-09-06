@@ -10,35 +10,42 @@ export const ActionTypes = {
   AUTHENTICATED_SUCCESS: "[users] Authenticated success",
 }
 
-export class AuthenticateAction implements Action {
+export interface PayloadAction<T> extends Action {
+	 payload: T;
+   }
+
+export function toPayload(action: PayloadAction<any>): any {
+	return action.payload;
+  }
+export class AuthenticateAction implements PayloadAction<{email:string, password:string}> {
 	readonly type: string = ActionTypes.AUTHENTICATE;
-	constructor(public payload:{email:string, password:string}){}
+	constructor(public payload:{email:string, password:string}){console.log("authenticate action is called");}
 }
 
-export class AuthenticatedAction implements Action{
+export class AuthenticatedAction implements PayloadAction<{token:string}>{
 
 	readonly type: string = ActionTypes.AUTHENTICATED;
 	constructor( public payload: {token:string}){}
 }
 
-export class AuthenticatedSuccesAction implements Action{
+export class AuthenticatedSuccesAction implements PayloadAction<{authenticated:boolean, user:User}>{
 	readonly type:string = ActionTypes.AUTHENTICATED_SUCCESS;
 	constructor ( public payload:{authenticated:boolean, user:User}){}
 }
 
-export class AuthenticatedErrorAction implements Action {
+export class AuthenticatedErrorAction implements PayloadAction<{any:any}> {
 	readonly type:string = ActionTypes.AUTHENTICATED_ERROR;
 	constructor(public payload:any){}
 }
 
-export class AuthenticationErrorAction implements Action {
+export class AuthenticationErrorAction implements PayloadAction<{any:any}> {
 	readonly type:string = ActionTypes.AUTHENTICATE_ERROR;
 	constructor(public payload:any){}
 }
 
-export class AuthenticationSuccesAction implements Action {
+export class AuthenticationSuccesAction implements PayloadAction<{user:User}> {
 	readonly type:string = ActionTypes.AUTHENTICATE_SUCCESS;
-	constructor( public payload: {user:User}){}
+	constructor( public payload: {user:User}){ console.log(" AuthenticationSuccesAction is called")}
 }
 
 export type Actions = AuthenticateAction | AuthenticationErrorAction 

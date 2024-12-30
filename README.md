@@ -32,9 +32,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng serve
 http://localhost:4200/accueil
 http://localhost:4200/auth/login
+
 ## generate ssh key 
 ssh-keygen -t ed25519 -C "nr.belhadj@gmail.com"
 pp nora
+
 ## git
 déposer un projet sur github
 se positionnr dans le projet
@@ -45,7 +47,7 @@ $ git add .   // ajouter ls fichiers au repo local
 
 $ git comit -m "Prmier commit"
 
-$ git remote add origin https://github.com/noraBelhadj/webproject.git
+$ git remote add origin https://github.com/noraBelhadj/webproject.git  (creation du repo git du projet en question, on peut le creer directement sur l'nterface git)
 
 $ git push -u origin master  // commiter les modifications sur la trunk ( master)
 
@@ -58,12 +60,14 @@ $ git add .
 $ git remote add origin https://github.com/noraBelhadj/webproject.git
 $ git fetch   // affiche l'ensemble des branches
 $ git checkout webproject-feature
-$ git checkout -b webproject-feature origin/webproject-feature // recuprer la branch feature 
+$ git checkout -b webproject-feature origin/webproject-feature // recuprer la branch feature et switch vers la brance feature
+$ npm install
+$ ng serve
+## commiter les modifs
 $ git commit -a -m "commit feature"
 $ git push
 $ git pull // Tout mettre à jour
-$ npm install
-$ ng serve
+
 
 lorsqu'on ajoute de nouveau components ou fichier,il faut executer git add . pour ls ajouter puis commit et push
 
@@ -100,13 +104,28 @@ ajouter la route:
  
  ajouter dans la déclaration de SubscribeComponent dans home.module.ts et la route export const routes =  [{ path:'', component: HomeComponent} , {path:'subcribe', component: HomeComponent}];
  
- 
+## reactiveforms
 
+## dircetive de structure
+ngif, ngfor
 
+## directive d'attributs
+ [ngClass] , [ngStyle]
  
- 
- 
- 
+## services
+
+##canactivate
+
+##session
+
+##les states (ngrx)
+
+#######utilité des fichiers
+
+#######contenu de l'appli
+
+page login
+pag souscrire
 
 ## lien
 https://www.concretepage.com/angular-2/angular-2-4-child-routes-and-relative-navigation-example

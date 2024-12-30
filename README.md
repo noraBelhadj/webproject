@@ -33,8 +33,9 @@ ng serve
 http://localhost:4200/accueil
 http://localhost:4200/auth/login
 
-###############################Notses techniques########################
-
+## generate ssh key 
+ssh-keygen -t ed25519 -C "nr.belhadj@gmail.com"
+pp nora
 
 ## git
 déposer un projet sur github
@@ -135,4 +136,4 @@ https://itnext.io/child-routes-with-respective-components-in-angular-4-36f1be422
 
 https://stackblitz.com/angular/jbgeoqlbyea?file=src%2Fapp%2Fapp.component.ts
 
-test 
+test  ordi 2

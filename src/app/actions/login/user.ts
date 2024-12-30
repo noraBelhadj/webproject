@@ -1,6 +1,9 @@
-import { Action } from '@ngrx/store';
 
-export interface User {
-	login: string;
-	password: string;
+
+export class User {
+  _id?: string;
+  email?: string;
+  firstName?: string;
+  lastName?: string;
+  password?: string;
 }

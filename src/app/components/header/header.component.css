@@ -12,6 +12,7 @@ h1{
 
 
 
+
 footer {
     height:80px;
     width: 100%;
@@ -49,9 +50,3 @@ nav a{
     display: table;
     margin: 0 auto;
 }
-
-.my-class{
-    color: red;
-}
-
-

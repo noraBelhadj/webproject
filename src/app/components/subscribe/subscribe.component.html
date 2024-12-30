@@ -1,3 +1,55 @@
-<p>
-  subscribe works!
-</p>
+
+
+
+<div class="container">
+	<div> 
+		<h1> Créer un compte </h1>
+	</div>
+	<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label> Email</label>
+			<input class="form-control" type="email" formControlName="email" [ngClass]="{'has-danger':userForm.controls.email.invalid && userForm.controls.email.dirty,
+				'has-success': userForm.controls.email.valid && userForm.controls.email.dirty}">
+			<div class="alert alert-danger" *ngIf="userForm.controls.email.invalid && userForm.controls.email.dirty"> 
+                 l'adress mail est incorect
+            </div>
+		</div>
+
+			    
+		<div class="form-group">
+			 <label>Mot de passe</label>
+			 <input class="form-control" type="password" formControlName="password" [ngClass]="{'has-success': userForm.controls.password.invalid && userForm.controls.password.dirty,
+				  'has-success': userForm.controls.password.valid && userForm.controls.password.dirty}">
+           <div class="alert alert-danger" *ngIf="userForm.controls.password.invalid && userForm.controls.password.dirty"> 
+                 le mot de passe doit depaser 8 caractère
+            </div>
+        </div>
+				
+		        <div formGroupName="infosPersonnel">
+		        	<div class="form-group">
+				    <label>Nom:</label>  
+                    <input class="form-control" type="text" formControlName="nom">
+                    <div class="alert alert-danger" *ngIf="userForm.controls.infosPersonnel.controls.nom.invalid && userForm.controls.infosPersonnel.controls.nom.dirty"> 
+                    le nom est obligatoire
+                     </div>
+                    </div>
+                    <div class="form-group">
+                    <label> Prenom:</label>
+                    <input class="form-control" type="text" formControlName="prenom" >
+                    </div>
+                    <div class="form-group">
+                    <label> Date de naissance</label>
+                    <input class="form-control" type="text" formControlName="dateDeNaissance">
+                    </div>
+			    </div> 
+			
+				<div>
+				 <button type="submit" class="btn btn-primary">Enregistrer</button>
+				</div>
+			
+
+		 
+		</form>
+		
+
+</div>

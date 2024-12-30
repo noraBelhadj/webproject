@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 //import { HumanizePipe } from '../core/pipes/humanize.pipe';
 
 // components
+import {HeaderComponent} from './components/header/header.component'
 //import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 // imports
 //import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     // components
+    HeaderComponent
    // LoadingIndicatorComponent,
     //NotificationComponent,
     // pipes
@@ -23,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     // components
+    HeaderComponent,
     //LoadingIndicatorComponent,
     //NotificationComponent,
     // modules
@@ -37,7 +40,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    CommonModule,
+    CommonModule
     //BsDropdownModule.forRoot()
   ]
 })

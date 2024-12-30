@@ -32,7 +32,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng serve
 http://localhost:4200/accueil
 http://localhost:4200/auth/login
-
+## generate ssh key 
+ssh-keygen -t ed25519 -C "nr.belhadj@gmail.com"
+pp nora
 ## git
 déposer un projet sur github
 se positionnr dans le projet
